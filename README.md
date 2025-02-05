@@ -1,2 +1,2 @@
 # osai
-Repo AI and OS 2025
+Repo AI and OS for RSE 2025
