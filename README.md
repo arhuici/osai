@@ -1,5 +1,5 @@
 # Proyecto Análisis de Artículos
-Este repositorio contiene el primer proyecto asociado al curso de Artificial Intelligence And Open Science In Research Software Engineering.
+Este repositorio contiene el primer proyecto asociado al curso de Artificial Intelligence And Open Science In Research Software Engineering de 2025.
 
 La aplicación que contiene utiliza Docker para montar dos contenedores: uno con GROBID y otro con un entorno Python. Esta aplicación permite analizar artículos científicos y extraer información mediante tres scripts.
 

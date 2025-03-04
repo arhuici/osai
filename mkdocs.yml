@@ -1,6 +1,6 @@
-site_name: Docs OSAI for RSP
+site_name: Documentación Proyecto OS & AI in RSE
 site_url: https://arhuici.github.io/osai
-site_description: "Primer proyecto del curso de Artificial Intelligence And Open Science In Research Software Engineering"
+site_description: "Primer proyecto del curso de Artificial Intelligence And Open Science In Research Software Engineering de 2025"
 site_author: "arhuici"
 
 theme:
@@ -8,9 +8,9 @@ theme:
 
 nav:
   - Home: index.md
-  - Installation: installation.md
-  - Features: features.md
-  - License: license.md
+  - Instalación: installation.md
+  - características: features.md
+  - Licencia: license.md
 
 # Páginas y documentación
 docs_dir: docs
