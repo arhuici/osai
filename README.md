@@ -19,11 +19,12 @@ Crea una visualización con el número de figuras por artículo. Devuelve un arc
 - Docker Compose
 
 ## Instalación y Ejecución
-1. Clonar este repositorio:  
-``` git clone https://github.com/arhuici/osai ```
-2. Introducir Artículos a analizar en la carpeta `/articles` del proyecto.
+1. Clonar este repositorio y navegar a la aplicación:  
+``` git clone https://github.com/arhuici/osai ```  
+``` cd .\osai\app\ ```
+2. Introducir los artículos a analizar en la carpeta `/articles` del proyecto.
 2. Construir y levantar contenedores:  
-```docker compose up -d --build```
+```docker compose up -d```
 3. Ejecutar scripts:
     - Wordcloud:  
 ```docker exec -it python_app python /app/scripts/s_links.py```
@@ -34,11 +35,11 @@ Crea una visualización con el número de figuras por artículo. Devuelve un arc
 
 4. Transferir resultados a local (Opcional)
     - Wordcloud:  
-```docker cp python_app:/app/persistent/results/wordcloud.png .```
+```docker cp python_app:/app/persistent/results/wordcloud.png ./python/results```
     - Figuras:  
-```docker cp python_app:/app/persistent/results/figures.png .```
+```docker cp python_app:/app/persistent/results/figures.png ./python/results```
     - Links:  
-```docker cp python_app:/app/persistent/results/links.json .```
+```docker cp python_app:/app/persistent/results/links.json ./python/results```
 
 ## Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.

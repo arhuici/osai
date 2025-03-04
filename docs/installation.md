@@ -7,7 +7,7 @@
 ``` git clone https://github.com/arhuici/osai ```
 2. Introducir Artículos a analizar en la carpeta `/articles` del proyecto.
 2. Construir y levantar contenedores:  
-```docker compose up -d --build```
+```docker compose up -d```
 3. Ejecutar scripts:
     - Wordcloud:  
 ```docker exec -it python_app python /app/scripts/s_links.py```
