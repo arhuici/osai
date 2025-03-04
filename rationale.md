@@ -4,11 +4,11 @@
 ## Características de los contenedores
 
 ### Docker Compose
-- Genera dos contenedores: python_app y grobid_service. El primero se inicializa cuando el segundo está corriendo y en funcionamiento.  
+- Genera dos contenedores: python_app y grobid. El primero se inicializa cuando el segundo está corriendo y en funcionamiento.  
 - Los dos contenedores se despliegan en una misma red para su comunicación.  
 - El contenedor python_app tiene enlazado un volumen para asegurar la persistencia de los resultados obtenidos con los scripts.
 
-### Dockerfile grobid_service
+### Dockerfile grobid
 Recoge la imagen de Docker Hub e instala curl para poder realizar la comprobación de salud en el Docker Compose.
 
 ### Dockerfile python_app

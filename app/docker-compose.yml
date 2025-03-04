@@ -14,7 +14,7 @@ services:
 
   grobid:
     build: grobid
-    container_name: grobid_service
+    container_name: grobid
     ports:
       - "8070:8070"
     networks:

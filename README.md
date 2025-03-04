@@ -23,9 +23,9 @@ Crea una visualización con el número de figuras por artículo. Devuelve un arc
 ``` git clone https://github.com/arhuici/osai ```  
 ``` cd .\osai\app\ ```
 2. Introducir los artículos a analizar en la carpeta `/articles` del proyecto.
-2. Construir y levantar contenedores:  
-```docker compose up -d```
-3. Ejecutar scripts:
+3. Construir y levantar contenedores:  
+```docker compose up -d --build python_app grobid```
+4. Ejecutar scripts:
     - Wordcloud:  
 ```docker exec -it python_app python /app/scripts/s_links.py```
     - Figuras:  
@@ -33,7 +33,7 @@ Crea una visualización con el número de figuras por artículo. Devuelve un arc
     - Links:  
 ```docker exec -it python_app python /app/scripts/s_links.py```
 
-4. Transferir resultados a local (Opcional)
+5. Transferir resultados a local (Opcional)
     - Wordcloud:  
 ```docker cp python_app:/app/persistent/results/wordcloud.png ./python/results```
     - Figuras:  
