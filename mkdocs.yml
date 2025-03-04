@@ -4,7 +4,7 @@ site_description: "Primer proyecto del curso de Artificial Intelligence And Open
 site_author: "arhuici"
 
 theme:
-  name: material
+  name: readthedocs
 
 nav:
   - Home: index.md
