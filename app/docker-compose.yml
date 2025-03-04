@@ -1,0 +1,37 @@
+version: '1'
+
+services:
+  python_app:
+    build: python
+    container_name: python_app
+    depends_on:
+      grobid:
+        condition: service_healthy
+    volumes:
+      - data_volume:/app/persistent
+    networks:
+      - my_network
+
+  grobid:
+    build: grobid
+    container_name: grobid_service
+    ports:
+      - "8070:8070"
+    networks:
+      - my_network
+    ulimits:
+      core: 0
+    init: true
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8070/api/isalive | grep 'true' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  data_volume:
+
+networks:
+  my_network:
+    driver: bridge
