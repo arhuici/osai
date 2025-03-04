@@ -4,13 +4,15 @@ Este repositorio contiene el primer proyecto asociado al curso de Artificial Int
 La aplicación que contiene utiliza Docker para montar dos contenedores: uno con GROBID y otro con un entorno Python. Esta aplicación permite analizar artículos científicos y extraer información mediante tres scripts.
 
 ## Funcionalidades
-- Wordcloud de keywords. Genera una nube de palabras a partir de los abstracts de los artículos. Devuelve un archivo .png
-- Conteo de figuas. Crea una visualización con el número de figuras por artículo. Devuelve un archivo .png
-- Lista de links. Genera una lista por artículo de los links que contiene. Devuelve un archivo .json
+- Wordcloud de keywords:  
+Genera una nube de palabras a partir de los abstracts de los artículos. Devuelve un archivo .png
+- Conteo de figuras:  
+Crea una visualización con el número de figuras por artículo. Devuelve un archivo .png
+- Lista de links: 
+ Genera una lista por artículo de los links que contiene. Devuelve un archivo .json
 
-## Resultados
-Los resultados de los scripts se almacenan en la carpeta `/results` asociada al volumen de Docker `data_volume`.
-
+- Resultados: 
+ Los resultados de los scripts se almacenan en la carpeta `/results` asociada al volumen de Docker `data_volume`.
 
 ## Requisitos
 - Docker
