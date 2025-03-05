@@ -9,7 +9,8 @@ theme:
 nav:
   - Home: index.md
   - Instalación: installation.md
-  - características: features.md
+  - Testing: tests.md
+  - Características: features.md
   - Licencia: license.md
 
 # Páginas y documentación

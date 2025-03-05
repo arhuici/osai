@@ -3,15 +3,16 @@ Este repositorio contiene el primer proyecto asociado al curso de Artificial Int
 
 La aplicación que contiene utiliza Docker para montar dos contenedores: uno con GROBID y otro con un entorno Python. Esta aplicación permite analizar artículos científicos y extraer información mediante tres scripts.
 
+Los scripts se ejecutan automáticamente al levantar los contenedores pero se pueden volver a ejecutar de forma manual.
+
 ## Funcionalidades
 - Wordcloud de keywords:  
 Genera una nube de palabras a partir de los abstracts de los artículos. Devuelve un archivo .png
 - Conteo de figuras:  
 Crea una visualización con el número de figuras por artículo. Devuelve un archivo .png
-- Lista de links: 
+- Lista de links:  
  Genera una lista por artículo de los links que contiene. Devuelve un archivo .json
-
-- Resultados: 
+- Resultados:  
  Los resultados de los scripts se almacenan en la carpeta `/results` asociada al volumen de Docker `data_volume`.
 
 ## Requisitos
@@ -21,19 +22,15 @@ Crea una visualización con el número de figuras por artículo. Devuelve un arc
 ## Instalación y Ejecución
 1. Clonar este repositorio y navegar a la aplicación:  
 ``` git clone https://github.com/arhuici/osai ```  
-``` cd .\osai\app\ ```
-2. Introducir los artículos a analizar en la carpeta `/articles` del proyecto.
-3. Construir y levantar contenedores:  
-```docker compose up -d --build python_app grobid```
-4. Ejecutar scripts:
-    - Wordcloud:  
-```docker exec -it python_app python /app/scripts/s_wordcloud.py```
-    - Figuras:  
-```docker exec -it python_app python /app/scripts/s_figures.py```
-    - Links:  
-```docker exec -it python_app python /app/scripts/s_links.py```
+``` cd osai/app ```  
+2. Introducir artículos a analizar en la carpeta `/articles` del proyecto.
+3. Construir y levantar contenedores (los scripts se ejecutan automáticamente):  
+```docker compose up --build python_app grobid```
 
-5. Transferir resultados a local (Opcional)
+
+## Transferir Resultados y Otros Comandos
+Se puede requerir abrir una terminal en la carpeta `/app` del proyecto.
+- Transferir resultados a máquina local
     - Wordcloud:  
 ```docker cp python_app:/app/persistent/results/wordcloud.png ./python/results```
     - Figuras:  
@@ -41,11 +38,16 @@ Crea una visualización con el número de figuras por artículo. Devuelve un arc
     - Links:  
 ```docker cp python_app:/app/persistent/results/links.json ./python/results```
 
-### Comandos adicionales
-6. Terminar aplicación:  
+- Ejecutar scripts manualmente:
+    - Wordcloud:  
+```docker exec -it python_app python /app/scripts/s_wordcloud.py```
+    - Figuras:  
+```docker exec -it python_app python /app/scripts/s_figures.py```
+    - Links:  
+```docker exec -it python_app python /app/scripts/s_links.py```
+- Terminar aplicación:  
     - Eliminar contenedores (manteniendo el volumen creado):  
 ```docker compose down```
-
     - Eliminar contenedores y volumen:  
 ```docker compose down -v```
 

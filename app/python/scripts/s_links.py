@@ -30,10 +30,10 @@ def get_links(pdf):
         all_text = " ".join(root.itertext()).strip()
         links = re.findall(regex, all_text)
 
-        print("Links encontrados:", len(links))
+        print("Links found:", len(links))
         
     else:
-        print(f"Error en la conversión: {response.status_code}")
+        print(f"Conversion error: {response.status_code}")
         print(response.text)
     return links
 

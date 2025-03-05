@@ -11,7 +11,8 @@
 Recoge la imagen de Docker Hub e instala curl para poder realizar la comprobación de salud en el Docker Compose.
 
 ### Dockerfile python_app
-Recoge la imagen de Python, instala las librerías necesarias para el funcionamiento de los scripts y prepara el entorno de trabajo con las carpetas `/scripts` en la que se sitúan los tres scripts, `/articles` con los pdf de entrada y `/results` con los resultados de los scripts. Por último, se mantiene el contenedor en ejecución para poder lanzar los scripts de Python.
+Recoge la imagen de Python, instala las librerías necesarias para el funcionamiento de los scripts y prepara el entorno de trabajo con las carpetas `/scripts` en la que se sitúan los tres scripts, `/articles` con los pdf de entrada y `/results` con los resultados de los scripts.  
+Por último, llama al entrypoint que ejecuta los scripts de forma automática y mantiene el contenedor vivo para futuras conexiones.
 
 ### Volumen data_volume
 Este volumen tiene las mismas carpetas `/articles` y `/results` del contenedor python_app, situadas en el subdirectorio `/peristent`.  

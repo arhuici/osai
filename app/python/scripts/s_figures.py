@@ -12,7 +12,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 def get_n_figures(pdf):
-    num_figures = None
+    num_figures = 0
 
     with open(pdf, "rb") as pdf_file:
         files = {"input": pdf_file}
@@ -27,10 +27,10 @@ def get_n_figures(pdf):
     
         figures = root.findall(".//tei:figure", namespace)
         num_figures = len(figures)
-        print("Figuras encontradas:", num_figures)
+        print("Figures found:", num_figures)
         
     else:
-        print(f"Error en la conversión: {response.status_code}")
+        print(f"Conversion error: {response.status_code}")
         print(response.text)
     return num_figures
 

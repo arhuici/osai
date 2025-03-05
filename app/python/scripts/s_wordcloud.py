@@ -28,12 +28,12 @@ def get_abstract(pdf):
         abstract_element = root.find(".//tei:abstract", namespace)
         if abstract_element is not None:
             abstract_text = " ".join(abstract_element.itertext()).strip()
-            print("Abstract extraído:")
+            print("Abstract succesfully extracted:")
             print(abstract_text[:50]+"...")
         else:
-            print("No se encontró el abstract en el documento.")
+            print("No abstract found in the document")
     else:
-        print(f"Error en la conversión: {response.status_code}")
+        print(f"Conversion error: {response.status_code}")
         print(response.text)
     return abstract_text
 
@@ -45,18 +45,22 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 def draw_wordcloud(abstracts):
-    text = " ".join(abstracts)
 
-    text = re.sub(r"[^a-zA-Z\s]", "", text.lower())
-
-    wordcloud = WordCloud(width=800, height=400, background_color="white", colormap="viridis", max_words=100).generate(text)
-
-    plt.figure(figsize=(10, 5))
-    plt.imshow(wordcloud, interpolation="bilinear")
-    plt.axis("off")
-    plt.title("Abstracts")
-    plt.savefig("persistent/results/wordcloud.png")
-    print("image saved at /results")
+    if abstracts == [] or all("" == abstract for abstract in abstracts):
+            print("No abstracts found")
+    else:
+        text = " ".join(abstracts)
+    
+        text = re.sub(r"[^a-zA-Z\s]", "", text.lower())
+    
+        wordcloud = WordCloud(width=800, height=400, background_color="white", colormap="viridis", max_words=100).generate(text)
+    
+        plt.figure(figsize=(10, 5))
+        plt.imshow(wordcloud, interpolation="bilinear")
+        plt.axis("off")
+        plt.title("Abstracts")
+        plt.savefig("persistent/results/wordcloud.png")
+        print("image saved at /results")
 
 """
 MAIN
@@ -66,7 +70,6 @@ def main():
 
     if files == []:
         print("No files found")
-
     else:
         abstracts = [get_abstract(pdf) for pdf in files]
         draw_wordcloud(abstracts=abstracts)
