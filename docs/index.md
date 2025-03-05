@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14976592.svg)](https://doi.org/10.5281/zenodo.14976592)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14976979.svg)](https://doi.org/10.5281/zenodo.14976979)
 
 Autor: Romero Huici, Ángel
 # Descripción
