@@ -14,6 +14,7 @@
 
 ## Transferir Resultados y Otros Comandos
 Se puede requerir abrir una terminal en la carpeta `/app` del proyecto.  
+
 - Transferir resultados a máquina local:  
     - Wordcloud:  
 ```docker cp python_app:/app/persistent/results/wordcloud.png ./python/results```  
