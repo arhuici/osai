@@ -1,5 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14976592.svg)](https://doi.org/10.5281/zenodo.14976592)
 
+Autor: Romero Huici, Ángel
 # Proyecto Análisis de Artículos
 Este repositorio contiene el primer proyecto asociado al curso de Artificial Intelligence And Open Science In Research Software Engineering de 2025.
 
