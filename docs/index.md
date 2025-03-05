@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14976592.svg)](https://doi.org/10.5281/zenodo.14976592)
+
 # Descripción
 Esta se trata de la documentación del repositorio que contiene el primer proyecto asociado al curso de Artificial Intelligence And Open Science In Research Software Engineering de 2025.
 

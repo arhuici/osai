@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14976592.svg)](https://doi.org/10.5281/zenodo.14976592)
+
 # Proyecto Análisis de Artículos
 Este repositorio contiene el primer proyecto asociado al curso de Artificial Intelligence And Open Science In Research Software Engineering de 2025.
 
@@ -50,6 +52,10 @@ Se puede requerir abrir una terminal en la carpeta `/app` del proyecto.
 ```docker compose down```
     - Eliminar contenedores y volumen:  
 ```docker compose down -v```
+
+
+## Citación del Repositorio
+Romero Huici, Á. (2025). arhuici/osai. https://github.com/arhuici/osai
 
 ## Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
