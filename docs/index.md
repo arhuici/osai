@@ -22,3 +22,6 @@ Crea una visualización con el número de figuras por artículo. Devuelve un arc
 ## Uso de la aplicación
 
 Comprueba la guía de instalación.
+
+## Referencias
+Garijo, D., Mao, A., Dharmala, H., Diwanji, C., Wang, J., Kelley, A., & García, M. A. (2025). SOMEF: Software metadata extraction framework (0.9.8). Zenodo. https://doi.org/10.5281/zenodo.14865582

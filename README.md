@@ -60,3 +60,6 @@ Romero Huici, Á. (2025). arhuici/osai. https://github.com/arhuici/osai
 
 ## Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+## Referencias
+Garijo, D., Mao, A., Dharmala, H., Diwanji, C., Wang, J., Kelley, A., & García, M. A. (2025). SOMEF: Software metadata extraction framework (0.9.8). Zenodo. https://doi.org/10.5281/zenodo.14865582
