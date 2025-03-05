@@ -34,10 +34,10 @@ Por cada uno de los pdfs encontrados, se envía una petición POST al servicio d
 Por ello, si la respuesta del servidor no es 200 o no se encuentra lo que se quiere buscar, no se procesa el texto del artículo en cuestión que haya dado error.  
 
 ### Wordcloud
-Tras obtener los abstracts de los artículos mediante su etiqueta TEI se extraen las palabras clave y se crea la nube de palabras. Se obtiene un abstract por artículo, el primero en el caso de que hayan varios.
+Tras obtener los abstracts de los artículos mediante su etiqueta TEI se extraen las palabras clave y se crea la nube de palabras. Se obtiene un abstract por artículo, el primero en el caso de que hayan varios.  
 - Extracción de palabras clave:  
 Se elimina del texto los caracteres especiales y se convierten a minúscula el resto de palabras.  
-No se eliminan elementos como stopwords porque la implementación de wordcloud utilizada ya lo hace.
+No se eliminan elementos como stopwords porque la implementación de wordcloud utilizada ya lo hace.  
 - Creación de nube de palabras:  
 Con el texto tratado se genera la nube de palabras y se almacena en `results/wordcloud.png` para su visualización.
 
@@ -50,7 +50,7 @@ Se dibuja un gráfico con el número de figuras frente a un índice. El gráfico
 
 ### Links 
 Tras obtener los links de cada artículo mediante una expresión regex, se guardan en un diccionario cuyas claves son índices, al igual que en el caso de las Figuras, y cuyos valores son las listas de links encontrados en cada archivo. Posteriormente, se almacena en un archivo json.  
-De esta forma se pueden visualizar los links que se han encontrado por artículo.
+De esta forma se pueden visualizar los links que se han encontrado por artículo.  
 - JSON:  
 Se almacena el diccionario obtenido con todos los links para su visualización y análisis en `results/links.json`.
 
