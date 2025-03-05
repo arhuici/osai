@@ -38,10 +38,10 @@ Se realizan pruebas en los siguientes escenarios sobre el método `get_links()`:
     - Seguir la guía de Instalación.  
 2. Ejecutar tests:  
     - Test Wordcloud:  
-```docker exec -it python_app python -m unittest python/scripts/test_wordcloud.py```
+```docker exec -it python_app python -m unittest /app/scripts/test_wordcloud.py```
     - Test Figuras:  
-```docker exec -it python_app python -m unittest python/scripts/s_figures.py```
+```docker exec -it python_app python -m unittest /app/scripts/test_figures.py```
     - Test Links:  
-```docker exec -it python_app python -m unittest python/scripts/s_links.py```
+```docker exec -it python_app python -m unittest /app/scripts/test_links.py```
 
 Los resultados de los tests se mostrarán impresos en pantalla.
